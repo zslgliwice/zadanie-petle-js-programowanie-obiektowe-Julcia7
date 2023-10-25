@@ -14,7 +14,7 @@
 	<label> Podaj imię: <input type="text" id="imie"> </label>
 	<label> Podaj wiek: <input type="number" id="wiek"> </label>
 	
-	<input type="submit" value="Sprawdź udział" onclick="sprawdz()">
+	<input type="submit" value="Sprawdź udział" onclick="sprawdz()" id="wiek" id1="imie">
 
 	<div id="wynik"></div>
 	
@@ -22,25 +22,24 @@
 	
 		function sprawdz()
 		{
-		var wiek = document.getElementById("wiek").value;
-            	var imie = document.getElementById("imie").value;
+			var wiek = document.getElementById("wiek").value;
+            var imie = document.getElementById("imie").value;
                 var wynik = document.getElementById("wynik");
-		if(wiek<16){
+			if(wiek<16){
                 wynik.innerHTML = "Nie może wziać udzialu w seansie";
-           	 }
-           	 else if(wiek<=17 && wiek>=16) {
-           	 wynik.innerHTML = "Może wziąć udział jeśli jest z opiekunem - cena biletu 12zł";
-            	}
-            	else if(imie=="Brad" && wiek>=18){
+            }
+            else if(wiek<=17 && wiek>=16) {
+            wynik.innerHTML = "Może wziąć udział jeśli jest z opiekunem - cena biletu 12zł";
+            }
+            else if(imie=="Brad" && wiek>=18){
                 wynik.innerHTML = "Może wziąć udział za darmo (0zł)";
-            	}
-           	 else if(imie=="Morgan" && wiek>=18){
+            }
+            else if(imie=="Morgan" && wiek>=18){
                 wynik.innerHTML = "Może wziąć udział za darmo (0zł)";
-           	 }
-           	 else if(wiek>=18){
+            }
+            else if(wiek>=18){
                 wynik.innerHTML = "Może wziąć udział - cena biletu 18zł";
-            	}
-			
+            }
 		}
 
 	</script>
