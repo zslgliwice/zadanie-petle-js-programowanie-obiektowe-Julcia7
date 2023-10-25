@@ -23,7 +23,40 @@
 	
 		function getDayName()
 		{
-					
+			var dzionek = document.getElementById("dzionek").value;
+                var wynik = document.getElementById("wynik");
+                if(dzionek==1){ 
+                    wynik.innerHTML = "Pierszy dzień tygodnia to monday - poniedzialek";
+                }
+                else if(dzionek==2){
+                    wynik.innerHTML = "Drugi dzień tygodnia to tuesday - wtorek";
+                }
+                else if(dzionek==3){
+                    wynik.innerHTML = "Trzeci dzień tygodnia to wednesday - środa";
+                }
+                else if(dzionek==4){
+                    wynik.innerHTML = "Czwarty dzień tygodnia to thursday - czwartek";
+                }
+
+                else if(dzionek==5){
+                    wynik.innerHTML = "Piaty dzień tygodnia to friday - piątek, piąteczek, piątunio";
+                    document.getElementById("wynik").style.color="yellow";
+                }
+
+                else if(dzionek==6){
+                    wynik.innerHTML = "Szósty dzień tygodnia to saturday - sobota";
+                    document.getElementById("wynik").style.color="green";
+                }
+                else if(dzionek==7){
+                    wynik.innerHTML = "Siódmy dzień tygodnia to sunday - niedziela";
+                    document.getElementById("wynik").style.color="green";
+                }
+                else{
+                    wynik.innerHTML = "To nie jest prawidłowy numer dnia tygodnia";
+                    document.getElementById("wynik").style.color="red";
+                }
+
+		
 			
 		}
 
