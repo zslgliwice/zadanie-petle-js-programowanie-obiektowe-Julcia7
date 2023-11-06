@@ -26,10 +26,26 @@
 			var a = document.getElementById('a').value;
 			var b = document.getElementById('b').value;
 			var c = document.getElementById('c').value;
-			
-			
-		}
+            
+ var wynikDiv = document.getElementById('wynik');
+ wynikDiv.innerHTML = '';
 
+// Najmniejsza z wprowadzonych liczb
+wynikDiv.innerHTML += "<p>Najmniejsza liczba: " + Math.min(a, b, c) + "</p>";
+
+// Największa z wprowadzonych liczb
+wynikDiv.innerHTML += "<p>Największa liczba: " + Math.max(a, b, c) + "</p>";
+
+// Wartość bezwzględna każdej podanej liczby
+wynikDiv.innerHTML += "<p>Wartość bezwzględna a: " + Math.abs(a) + "</p>";
+wynikDiv.innerHTML += "<p>Wartość bezwzględna b: " + Math.abs(b) + "</p>";
+wynikDiv.innerHTML += "<p>Wartość bezwzględna c: " + Math.abs(c) + "</p>";
+
+// Informacja czy liczba jest parzysta
+wynikDiv.innerHTML += "<p>Liczba a jest " + (a % 2 === 0 ? "parzysta" : "nieparzysta") + "</p>";
+wynikDiv.innerHTML += "<p>Liczba b jest " + (b % 2 === 0 ? "parzysta" : "nieparzysta") + "</p>";
+wynikDiv.innerHTML += "<p>Liczba c jest " + (c % 2 === 0 ? "parzysta" : "nieparzysta") + "</p>";
+}
 	</script>
 
 </body>
